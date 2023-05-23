@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: rn/about.html 
+keywords:  
+summary:  
+---
+= A proposito di questa release
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La documentazione disponibile in questo sito descrive l'API REST di Astra Control e le relative tecnologie di automazione disponibili con la release di aprile 2022 (22.04) di Astra Control. In particolare, questa release dell'API REST è inclusa con le corrispondenti release 22.04 di Astra Control Center e Astra Control Service.
+
+Per ulteriori informazioni su questa release e sulle release precedenti, consultare le pagine e i siti seguenti:
+
+* link:../rn/whats_new.html["Novità dell'API REST di Astra Control"]
+* link:../endpoints/resources.html["Risorse REST ed endpoint"]
+* https://docs.netapp.com/us-en/astra-control-center-2204/["Documentazione di Astra Control Center 22.04"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Documentazione del servizio Astra Control"^]
+* link:../aa-earlier-versions.html["Versioni precedenti della documentazione di Astra Automation"]
+

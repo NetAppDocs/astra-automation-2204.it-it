@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_manage_app.html 
+keywords:  
+summary:  
+---
+= Gestire un'applicazione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare un'applicazione gestita in base a un'applicazione già nota ad Astra. Quando un'applicazione viene gestita, è possibile proteggerla eseguendo backup e snapshot regolari.
+
+
+
+=== Prima di iniziare
+
+È necessario disporre dell'ID dell'applicazione rilevata che si desidera gestire. Se necessario, è possibile utilizzare il flusso di lavoro link:wf_list_unman_apps.html["Elencare le applicazioni non gestite"] per individuare l'applicazione.
+
+
+
+=== 1. Gestire l'applicazione
+
+Eseguire la seguente chiamata API REST.
+
+[cols="25,75"]
+|===
+| Metodo HTTP | Percorso 
+
+
+| POST | /Account/{AccountID}/k8s/v1/managedApps 
+|===
+
+
+===== Parametri di input aggiuntivi
+
+Oltre ai parametri comuni a tutte le chiamate API REST, negli esempi di curl vengono utilizzati anche i seguenti parametri.
+
+[cols="25,10,10,55"]
+|===
+| Parametro | Tipo | Obbligatorio | Descrizione 
+
+
+| JSON | Corpo | Sì | Fornisce i parametri necessari per identificare l'applicazione da gestire. Vedere l'esempio riportato di seguito. 
+|===
+
+
+===== Esempio di input JSON
+
+[source, json]
+----
+{
+  "type": "application/astra-managedApp",
+  "version": "1.1",
+  "id": "7da20fff-c69d-4270-bb0d-a4f91c5a1333"
+}
+----
+
+
+===== Esempio di curl: Gestire un'applicazione
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --d @JSONinput
+----

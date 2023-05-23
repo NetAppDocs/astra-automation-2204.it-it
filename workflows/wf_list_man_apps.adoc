@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_list_man_apps.html 
+keywords:  
+summary:  
+---
+= Elencare le applicazioni gestite
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile elencare le applicazioni attualmente gestite da Astra. È possibile eseguire questa operazione nell'ambito della ricerca di snapshot o backup per un'applicazione specifica.
+
+
+
+=== 1. Elencare le applicazioni
+
+Eseguire la seguente chiamata API REST.
+
+[cols="25,75"]
+|===
+| Metodo HTTP | Percorso 
+
+
+| OTTIENI | /Account/{AccountID}/k8s/v1/managedApps 
+|===
+
+
+===== Parametri di input aggiuntivi
+
+Oltre ai parametri comuni a tutte le chiamate API REST, negli esempi di curl vengono utilizzati anche i seguenti parametri.
+
+[cols="25,10,10,55"]
+|===
+| Parametro | Tipo | Obbligatorio | Descrizione 
+
+
+| includi | Query | No | Se si desidera, selezionare i valori che si desidera restituire nella risposta. 
+|===
+
+
+===== Esempio di curl: Restituisce tutti i dati per tutte le applicazioni
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== Esempio di curl: Restituisce il nome, l'id e lo stato per tutte le applicazioni
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps?include=name,id,state' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== Esempio di output JSON
+
+[source, json]
+----
+{
+  "items": [
+    [
+      "test-postgres-app",
+      "1ee6235b-cda1-45cb-8d4c-630bdb8b41a5",
+      "running"
+    ]
+  ],
+  "metadata": {}
+}
+----

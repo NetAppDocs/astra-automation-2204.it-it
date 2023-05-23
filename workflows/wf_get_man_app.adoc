@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_get_man_app.html 
+keywords:  
+summary:  
+---
+= Ottieni un'app gestita
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile recuperare tutte le variabili delle risorse che descrivono una singola applicazione gestita.
+
+
+
+=== Prima di iniziare
+
+È necessario disporre dell'ID dell'applicazione gestita che si desidera recuperare. Se necessario, è possibile utilizzare il flusso di lavoro link:wf_list_man_apps.html["Elencare le applicazioni gestite"] per individuare l'applicazione.
+
+
+
+=== 1. Scarica l'applicazione
+
+Eseguire la seguente chiamata API REST.
+
+[cols="25,75"]
+|===
+| Metodo HTTP | Percorso 
+
+
+| OTTIENI | /Accounts/{account_id}/k8s/v1/managedApps/{managedApp_id} 
+|===
+
+
+===== Parametri di input aggiuntivi
+
+Oltre ai parametri comuni a tutte le chiamate API REST, negli esempi di curl vengono utilizzati anche i seguenti parametri.
+
+[cols="25,10,10,55"]
+|===
+| Parametro | Tipo | Obbligatorio | Descrizione 
+
+
+| id app gestito | Percorso | Sì | Valore ID dell'applicazione gestita da recuperare. 
+|===
+
+
+===== Esempio di curl: Restituisce tutti i dati per l'applicazione
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
