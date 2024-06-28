@@ -612,7 +612,6 @@
   <block id="af7c4c7bd30238dcb53e639cf7a50996" category="cell">Stringa JSON contenente l'identificatore UUIDv4 dell'id utente che ha creato la risorsa. Se la risorsa è stata creata da un componente di sistema interno e non esiste un UUID associato all'entità di creazione, viene utilizzato l'UID *null*.</block>
   <block id="6cb8b958a36383ed1b7bacc626d0a5dd" category="paragraph-title">Stato della risorsa</block>
   <block id="b7aa38141b9dd3f7e78cd09e7f60ce0c" category="paragraph">Risorse selezionate a<block ref="9ed39e2ea931586b6a985a6942ef573e" prefix=" " category="inline-code"></block> valore utilizzato per orchestrare le transizioni del ciclo di vita e controllare l'accesso.</block>
-  <block id="c6c51849eeb1ac322baa3a99b7cd7e43" category="summary">Questo è il riepilogo di Astra Automation.</block>
   <block id="798161428a705ba47c31cc8ace9316e3" category="doc">Documentazione di Astra Control Automation 22.04</block>
   <block id="599887dba3179dd0daaa4b5d587aa0a0" category="doc">Risorse ed endpoint</block>
   <block id="8e9b0300da42294f8690b8db105eb132" category="paragraph">È possibile utilizzare le risorse fornite tramite l'API REST di Astra Control per automatizzare una distribuzione Astra. Ogni risorsa è accessibile attraverso uno o più endpoint. Le informazioni presentate di seguito forniscono un'introduzione alle risorse RIMANENTI che è possibile utilizzare come parte di un'implementazione di automazione.</block>
@@ -915,4 +914,5 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="775e2faa120631457b3eb5f26a2f323a" category="sidebar">Astra Control è un prodotto software NetApp che fornisce la gestione del ciclo di vita dei dati per le applicazioni Kubernetes. A seconda dell'ambiente in uso, sono disponibili due modelli di implementazione. Sia Astra Control Center che Astra Control Service condividono la stessa API REST per una data release. Puoi utilizzare l'API e altre tecnologie di automazione correlate per gestire le implementazioni di Astra Control.</block>
 </blocks>
